@@ -36,4 +36,8 @@ widePointer* constructWidePointer();
 void setFromInputStream(widePointer * inputPointer , char * inputStream);
 void setFromWidePointer(widePointer * inputPointer , widePointer* setFromPointer);
 void addCharacter(widePointer * this, char c);
+
+
+//page pointers 
 pagePointer * constructPagePointer(size_t entires);
+void freePagePointer(pagePointer * PagePointer);

@@ -1,17 +1,23 @@
 #include "Lexer\lexer.h"
 
 int main(){
-    pagePointer * vectorString;
-    vectorString = constructPagePointer(1);
-    
-    widePointer* lexerString= vectorString->pointerPages[0];
+    while(true){
 
-    setFromInputStream(lexerString, "acbdef");
+        
+        pagePointer * vectorString;
+        vectorString = constructPagePointer(1);
+        
+        widePointer* lexerString= vectorString->pointerPages[0];
 
-    addCharacter(lexerString, 'g');
-    for(int x =0; x< lexerString->pascalInt; x++){
-        printf("%c",lexerString->string[x]);
+        setFromInputStream(lexerString, "acbdef");
 
+        addCharacter(lexerString, 'g');
+        for(int x =0; x< lexerString->pascalInt; x++){
+            printf("%c",lexerString->string[x]);
+
+        }
+        printf("\n");
+        // printf("%s", lexerString->string);
+        freePagePointer(vectorString);
     }
-    // printf("%s", lexerString->string);
 }
