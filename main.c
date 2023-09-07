@@ -2,11 +2,11 @@
 
 int main(){
     while(true){
-
         
         pagePointer * vectorString;
         vectorString = constructPagePointer(1);
-        
+        freePagePointer(vectorString);
+
         widePointer* lexerString= vectorString->pointerPages[0];
 
         setFromInputStream(lexerString, "acbdef");
@@ -18,6 +18,5 @@ int main(){
         }
         printf("\n");
         // printf("%s", lexerString->string);
-        freePagePointer(vectorString);
     }
 }
